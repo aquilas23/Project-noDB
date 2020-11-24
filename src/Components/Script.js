@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Verse from './Verse';
+
 
 class script extends Component {
     constructor(props){
@@ -25,12 +25,15 @@ class script extends Component {
     }
 
     render(){
+        const {isEditing}= this.state
+        const {titleInput}= this.state
+
         return (
-            <div className="btn"> {this.state.isEditing
+            <div className="btn"> {isEditing
                 ? (
                     <div>
                         <input 
-                            value={this.state.titleInput}
+                            value={titleInput}
                             onChange={e => this.handleInput(e.target.value)}/>
                         <button onClick={() => this.handleEdit(this.props.script.id)}>Submit</button>
                     </div>
@@ -42,7 +45,7 @@ class script extends Component {
                         <button onClick={this.handleToggle}>Edit Title</button>
                     </div>
                 )}
-                <button onClick={}>Update</button>
+                <button >Update</button>
             </div>
         )
     }

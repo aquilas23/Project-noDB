@@ -31,7 +31,7 @@ var scripts = [
 module.exports={
 
     getScripts:(req, res) => {
-        req.status(200).send(scripts);
+        res.status(200).send(scripts);
     },
 
     getSingleScript: (req,res) => {

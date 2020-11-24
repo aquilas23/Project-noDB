@@ -4,6 +4,7 @@ import Header from './Components/Header';
 import Verse from './Components/Verse';
 import axios from 'axios';
 import Script from './Components/Script'
+import Finder from './Components/Finder'
 
 
 class App extends Component{
@@ -18,7 +19,6 @@ class App extends Component{
     componentDidMount(){
         axios.get('/api/script/1')
         .then( res => {
-            console.log(res.data)
             this.setState({selectedScript:res.data})
         })
         .catch(err => console.log(err));
@@ -28,7 +28,6 @@ class App extends Component{
     addScript(bodyObj){
       axios.post('/api/script', bodyObj)
       .then(res => {
-        console.log(res.data)
         this.setState({selectedScript: res.data})
       })
       .catch(err => console.log(err));
@@ -62,6 +61,9 @@ render(){
               deletefn= {this.deleteScript}
               addScriptfn={this.addScript}
               />
+              <div className= "all-script"> <Finder /> </div>
+       
+
              </div>
         )
     }

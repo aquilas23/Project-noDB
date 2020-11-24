@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import Finder from './Finder';
-import VerseDisplay from './VerseDisplay';
 import axios from 'axios';
 
 
@@ -80,11 +78,11 @@ componentDidUpdate(prevProps,prevState){
 }
     render(){
         const {quoteScript}=this.state
-        const viewQuote={
-            1:(<Finder grabInput={this.grabInput} displayName={quoteScript} />),
+        // const viewQuote={
+        //     1:(<Finder grabInput={this.grabInput} displayName={quoteScript} />),
 
-            2: < VerseDisplay />
-        };
+        //     2: < VerseDisplay />
+        // };
 
         return(
             <section>
