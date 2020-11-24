@@ -25,8 +25,7 @@ render(){
     const {script} =this.state
     const mappedScript= script.map((e,i)=>(
         <div key={i} className="quote">
-            <h6> {e.title}</h6>
-            <p>{e.quote} </p>
+            <p> {e.quote} </p>
         </div>
     ));
     

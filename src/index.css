@@ -16,6 +16,23 @@ code {
   background-color: rgb(99, 94, 74);
   text-align: center;
   border-radius: 20px;
-  overflow-y: scroll;
   padding: 20px;
+}
+
+.quote{
+  display: flex;
+  flex-wrap: wrap;
+  margin:10px ;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+  flex: 50%;
+  text-align: center;
+  color: black;
+
+
+}
+@media (max-width: 800px) {
+  .quote {
+    flex: 100%;
+  }
 }
